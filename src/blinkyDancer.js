@@ -1,4 +1,5 @@
 var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
+//test comment
   var blinkyDancer = makeDancer(top, left, timeBetweenSteps);
 
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
