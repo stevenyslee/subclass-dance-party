@@ -17,6 +17,6 @@ makeGhostlyDancer.prototype.step = function() {
   }, 5000, function() {
     // Animation complete.
   }).mouseover(function() {
-    $(".ghostlyDancer").css('display', 'none');
+    $('.ghostlyDancer').css('display', 'none');
   });
 };
