@@ -1,33 +1,40 @@
 $(document).ready(function() {
   window.dancers = [];
+  window.oldPositions = [];
+
+  $('#createLine').on('click', function(event) {
+      var midLine = $("body").height() * .7;
+
+      for (var j = 0; j < window.dancers.length; j++) {
+        var vertical = window.dancers[j].position.top
+        var horizontal = window.dancers[j].position.left
+        window.oldPositions.push(vertical);
+        vertical = midLine;
+        window.dancers[j].setPosition(vertical, horizontal);
+      };
+    });
+
+    $('#disbandLine').on('click', function(event) {
+      window.oldPositions.reverse();
+      for (var j = 0; j < window.dancers.length; j++) {
+        var vertical = window.dancers[j].position.top
+        var horizontal = window.dancers[j].position.left
+        vertical = window.oldPositions[window.oldPositions.length-1];
+        window.oldPositions.pop();
+        window.dancers[j].setPosition(vertical, horizontal);
+      };
+    });
 
   $('.addDancerButton').on('click', function(event) {
-    /* This function sets up the click handlers for the create-dancer
-     * buttons on dancefloor.html. You should only need to make one small change to it.
-     * As long as the "data-dancer-maker-function-name" attribute of a
-     * class="addDancerButton" DOM node matches one of the names of the
-     * maker functions available in the global scope, clicking that node
-     * will call the function to make the dancer.
-     */
-
-    /* dancerMakerFunctionName is a string which must match
-     * one of the dancer maker functions available in global scope.
-     * A new object of the given type will be created and added
-     * to the stage.
-     */
     var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
-    // get the maker function for the kind of dancer we're supposed to make
     var dancerMakerFunction = window[dancerMakerFunctionName];
-
-    // make a dancer with a random position
-
     var dancer = new dancerMakerFunction(
-      $('body').height() * Math.random(),
+      $("body").height() - ($("body").height() * Math.random() * 3/5),
       $('body').width() * Math.random(),
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
+    window.dancers.push(dancer);
   });
-  
-});
 
+});

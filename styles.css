@@ -1,11 +1,60 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 body, html{
   height:100%;
 }
 body{
   margin: 0px;
-  background-color:#444;
+  /* background-color:#444; */
   font-size: 18px;
+  background-image: url('images/danceFloor.jpg');
+  background-repeat: no-repeat;
+  height: 600px;
+  width: 1200px;
 }
+
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
@@ -24,22 +73,26 @@ body, a:link, a:visited, a:active{
   /*border:10px solid red;*/
   border-radius:10px;
   position:absolute;
+  width: 150px;
+  height: 150px;
+  background-image: url('images/animated-dancing-image-0264.gif');
+
 }
 .ghostlyDancer{
   background: url(https://vignette.wikia.nocookie.net/brutalmario/images/7/7c/Boo.png/revision/latest?cb=20150617073957) no-repeat;
   background-size: 100px;
-  width: 100%;  
-  height: 100%;  
+  width: 100%;
+  height: 100%;
 }
 .quirkyDancer{
   background: url(https://dbutera-webdesign.wikispaces.com/file/view/giphy.gif/552987296/208x147/giphy.gif) no-repeat;
   background-size: 300px;
-  width: 100%;  
-  height: 100%;  
+  width: 100%;
+  height: 100%;
 }
 .groovyDancer{
   background: url(https://45.media.tumblr.com/1ec27464115b4d267078a51aa8dc8d26/tumblr_nx9s8wYBYi1rxkd4jo1_500.gif) no-repeat;
   background-size: 300px;
-  width: 100%;  
-  height: 100%;  
+  width: 100%;
+  height: 100%;
 }
