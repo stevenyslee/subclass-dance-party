@@ -9,14 +9,5 @@ makeQuirkyDancer.prototype.constructor = makeQuirkyDancer;
 makeQuirkyDancer.prototype.step = function() {
   makeDancer.prototype.step.call(this);
   this.$node.toggle();
-  // this.$node.toggle("fast", function(){
-  //   // Animation complete.
-  // }).animate({
-  //   opacity: 0.25,
-  //   left: "+=50",
-  //   height: "toggle"
-  // }, 5000, function() {
-  //   // Animation complete.
-  // });
 };
 
