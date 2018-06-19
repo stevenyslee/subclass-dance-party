@@ -7,7 +7,7 @@ var makeDancer = function(top, left, timeBetweenSteps) {
 
 makeDancer.prototype.step = function() {
   var currentThis = this;
-  setTimeout(function() {
+  setTimeout(function() { 
     currentThis.step();
   }, this.timeBetweenSteps);
 };

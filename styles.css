@@ -25,9 +25,23 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
-
-.line-dancer{
-  border:10px solid purple;
+/*.ghostlyDancer{
+  border:25px solid blue;
+  border-radius:10px;
+  position:absolute;
+  background: url(https://vignette.wikia.nocookie.net/brutalmario/images/7/7c/Boo.png/revision/latest?cb=20150617073957) no-repeat;
+}*/
+.ghostlyDancer{
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url(https://vignette.wikia.nocookie.net/brutalmario/images/7/7c/Boo.png/revision/latest?cb=20150617073957) no-repeat;
+  width: 180px; /* Width of new image */
+  height: 236px; /* Height of new image */
+  padding-left: 180px; /* Equal to width of new image */
+}
+.quirkyDancer{
+  border:20px solid green;
   border-radius:10px;
   position:absolute;
 }
