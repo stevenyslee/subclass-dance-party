@@ -25,3 +25,9 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+
+.line-dancer{
+  border:10px solid purple;
+  border-radius:10px;
+  position:absolute;
+}
