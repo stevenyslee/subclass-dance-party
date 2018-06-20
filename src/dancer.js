@@ -10,14 +10,17 @@ var makeDancer = function(top, left, timeBetweenSteps) {
 makeDancer.prototype.move = function(input) {
   input = input || 20;
   var randomNumber = Math.round(Math.random());
-  if (randomNumber === 1 && this.position.left > 300){
+  
+  if (randomNumber === 1 && parseInt(this.$node.css('left')) < 100){
     this.position.left += Math.floor(Math.random() * Math.floor(input));
-  } else if (randomNumber === 0 && this.position.left < 500) {
+  } else if (randomNumber === 0 && parseInt(this.$node.css('left')) > 1200) {
     this.position.left -= Math.floor(Math.random() * Math.floor(input));
-  } else if (randomNumber === 1){
-    this.position.left += Math.floor(Math.random() * Math.floor(input));
+  } 
+  
+  else if (randomNumber === 1){
+    this.position.left += Math.floor(Math.random() * Math.floor(3));
   } else if (randomNumber === 0) {
-    this.position.left -= Math.floor(Math.random() * Math.floor(input));
+    this.position.left -= Math.floor(Math.random() * Math.floor(3));
   }
   this.setPosition(this.position.top, this.position.left);
 }

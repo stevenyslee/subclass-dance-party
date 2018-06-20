@@ -32,3 +32,26 @@ describe('blinkyDancer', function() {
     });
   });
 });
+
+describe('dancers', function() {
+  window.dancers = [];
+  var mj;
+  var timeBetweenSteps = 100;
+
+  beforeEach(function() {
+    mj = new mjDancer(10, 20, timeBetweenSteps);
+  });
+  
+  describe('mjDancer', function() {
+    it('should have methods named "thriller", and "step"', function() {
+      expect(mj.thriller).to.be.a('function');
+      expect(mj.step).to.be.a('function');
+    });
+
+    it('Subclass should have a constructor function', function() {
+      expect(mj.constructor).to.be.a('function');
+    });
+    
+  });
+
+});

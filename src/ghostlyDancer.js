@@ -1,5 +1,5 @@
 var makeGhostlyDancer = function(top, left, timeBetweenSteps) {
-  makeDancer.call(this, top, left, timeBetweenSteps);
+  makeDancer.call(this, top - 200, left, timeBetweenSteps);
   this.$node.addClass('ghostlyDancer');
   this.isGhost = true;
 };

@@ -7,7 +7,7 @@ makeGroovyDancer.prototype = Object.create(makeDancer.prototype);
 makeGroovyDancer.prototype.constructor = makeGroovyDancer;
 
 makeGroovyDancer.prototype.step = function() {
-  makeDancer.prototype.step.call(this, 120);
+  makeDancer.prototype.step.call(this);
 
   var node = this.$node;
 
